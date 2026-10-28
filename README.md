@@ -1,7 +1,8 @@
-# Hlídej mimino! 👶
+# Lubina Game 👶
 
 Rodinná mobilní hra (PWA). Hraj na: https://kusy-projekty.github.io/hlidej-mimino/
 
-- 🏠 Nový režim **Dům z očí (Doom styl)** – 3D pohled z vlastních očí, bez zbraní.
-- Online s rodinou: automatické připojení, stačí vybrat postavu.
-- Offline verze v jednom souboru: [Hra-Mimino.html](https://kusy-projekty.github.io/hlidej-mimino/Hra-Mimino.html)
+- ▶ Hrát s rodinou – online ve 3D domě, bez kódů a bez účtů (max 8 hráčů)
+- 🌪️ Kristof s Matýskem dělají binec – uklidni je a ukliď to!
+- 🕹️ Klasická 2D verze
+- Offline soubor: [Lubina-Game.html](Lubina-Game.html) (stejný jako Hra-Mimino.html)
