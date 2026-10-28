@@ -28,21 +28,85 @@ p{margin:4px 0;color:#ddd;font-size:14px;max-width:440px}
 .it{background:#3d4044;border-radius:10px;padding:8px 4px;font-size:12px}.it .e{font-size:32px}.it button{margin-top:4px;width:100%;font-size:13px;padding:6px}
 .badges{display:flex;flex-wrap:wrap;gap:4px;justify-content:center;font-size:12px}.badges span{background:#3d4044;border-radius:8px;padding:3px 7px}.badges span.no{opacity:.35}
 table{width:100%;border-collapse:collapse;font-size:14px}td{padding:6px;border-bottom:1px solid #444}tr.me td{background:#00a2ff33}
+
+.home{background:radial-gradient(120% 80% at 10% 0%,#4c1d95 0%,transparent 55%),radial-gradient(120% 90% at 100% 100%,#0e7490 0%,transparent 55%),linear-gradient(160deg,#0f172a,#1e1b4b);padding:max(10px,env(safe-area-inset-top)) 12px 14px;justify-content:center}
+.hm{width:100%;max-width:460px;display:flex;flex-direction:column;gap:10px;margin:auto 0}
+.glass{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.hbar{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.brand{display:flex;align-items:center;gap:9px;text-align:left}.brand img{width:44px;height:44px;border-radius:14px;border:2px solid #f9a8d4;object-fit:cover;background:#fce7f3}
+.brand b{display:block;font-size:20px;font-weight:900;letter-spacing:.2px;line-height:1.05}.brand b span{background:linear-gradient(90deg,#f472b6,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}.brand small{color:#c7d2fe;font-size:11px;font-weight:600}
+.chips{display:flex;gap:5px;align-items:center}.chip{background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:5px 9px;font-size:12px;font-weight:800;color:#fff;white-space:nowrap}
+.chip.ib{width:34px;height:34px;padding:0;font-size:16px;display:grid;place-items:center}
+.hxp{height:6px;margin:-4px 2px 0;background:rgba(0,0,0,.35);border-radius:4px}.hxp div{background:linear-gradient(90deg,#f472b6,#a78bfa,#22d3ee)}
+.hcols{display:flex;flex-direction:column;gap:10px}
+.hero{padding:14px;display:flex;flex-direction:column;gap:12px}
+.me{display:flex;align-items:center;gap:10px;text-align:left}.me img{width:54px;height:54px;border-radius:16px;object-fit:cover;border:3px solid #a78bfa;background:#312e81}
+.me div{flex:1;min-width:0}.me small{display:block;color:#c7d2fe;font-size:12px;font-weight:700}.me b{display:block;font-size:19px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lnk{background:rgba(255,255,255,.12);border:0;color:#fff;font-weight:800;font-size:13px;border-radius:999px;padding:7px 12px}
+.cta{display:flex;align-items:center;gap:14px;width:100%;border:0;border-radius:20px;padding:16px 18px;color:#fff;text-align:left;background:linear-gradient(135deg,#ec4899,#8b5cf6 55%,#06b6d4);box-shadow:0 8px 24px rgba(236,72,153,.4),inset 0 1px 0 rgba(255,255,255,.35);animation:pulse 2.4s ease-in-out infinite}
+.cta:active{transform:scale(.97)}.ci{width:52px;height:52px;flex:none;border-radius:50%;background:rgba(255,255,255,.22);display:grid;place-items:center;font-size:24px}
+.ct b{display:block;font-size:24px;font-weight:900;line-height:1.1}.ct small{display:block;font-size:13px;font-weight:700;opacity:.92;margin-top:2px}
+@keyframes pulse{0%,100%{box-shadow:0 8px 24px rgba(236,72,153,.35),inset 0 1px 0 rgba(255,255,255,.35)}50%{box-shadow:0 8px 34px rgba(139,92,246,.7),inset 0 1px 0 rgba(255,255,255,.35)}}
+.live{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#e0e7ff;text-align:left;min-height:18px}.live i{width:9px;height:9px;flex:none;border-radius:50%;background:#94a3b8}.live.on i{background:#22c55e;box-shadow:0 0 0 0 #22c55e;animation:dot 1.6s infinite}
+@keyframes dot{0%{box-shadow:0 0 0 0 rgba(34,197,94,.7)}100%{box-shadow:0 0 0 9px rgba(34,197,94,0)}}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.tile{border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:12px 10px;color:#fff;text-align:left;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:9px;align-items:center;min-height:62px;background:rgba(255,255,255,.07);backdrop-filter:blur(10px)}
+.tile:active{transform:scale(.96)}.te{grid-row:1/3;font-size:26px;width:40px;height:40px;border-radius:12px;display:grid;place-items:center}
+.tile b{font-size:15px;font-weight:900}.tile small{font-size:11px;color:#c7d2fe;font-weight:600}
+.t1 .te{background:linear-gradient(135deg,#f97316,#ef4444)}.t2 .te{background:linear-gradient(135deg,#22c55e,#0ea5e9)}.t3 .te{background:linear-gradient(135deg,#64748b,#334155)}.t4 .te{background:linear-gradient(135deg,#eab308,#f97316)}
+.bdgw{padding:8px 12px;font-size:13px;font-weight:800;text-align:left}.bdgw summary{cursor:pointer;color:#e0e7ff}.bdgw .badges{margin-top:7px;justify-content:flex-start}.bdgw .badges span{background:rgba(255,255,255,.1)}
+.sheet{position:fixed;inset:0;z-index:70;background:rgba(2,6,23,.6);display:flex;align-items:flex-end;justify-content:center;padding:10px}
+.sbox{width:100%;max-width:520px;max-height:92dvh;overflow:auto;padding:14px;background:rgba(30,27,75,.92);animation:up .22s ease-out}
+@keyframes up{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+.shd{display:flex;justify-content:space-between;align-items:center;font-size:19px;font-weight:900;margin-bottom:4px}.shp{color:#c7d2fe;font-size:13px;margin:4px 0 8px;max-width:none}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.pc{background:rgba(255,255,255,.07);border:2px solid transparent;border-radius:16px;padding:7px 3px;color:#fff;position:relative}.pc img{width:100%;max-width:70px;aspect-ratio:1;border-radius:12px;object-fit:cover;display:block;margin:0 auto 4px}
+.pc b{display:block;font-size:13px;font-weight:800}.pc small{font-size:10px;color:#a5b4fc}.pc.sel{border-color:#f472b6;background:rgba(244,114,182,.15)}.pc.tk{opacity:.35;filter:grayscale(1)}
+body.home-on #musB{display:none}
+@media (orientation:landscape) and (max-height:560px){.home{justify-content:flex-start}.hm{max-width:820px;gap:8px;margin:0 auto}.hcols{display:grid;grid-template-columns:1.15fr 1fr;gap:10px;align-items:stretch}
+ .hero{padding:12px;gap:10px;justify-content:center}.tiles{grid-template-rows:1fr 1fr}.tile{min-height:0}.ct b{font-size:22px}.cta{padding:13px 16px}
+ .sheet{align-items:center}.sbox{max-width:760px}.pgrid{grid-template-columns:repeat(9,1fr)}.pc img{max-width:64px}.bdgw{padding:6px 12px}}
 </style></head><body>
 <canvas id="c"></canvas>
-<div id="menu" class="scr">
- <div class="top"><span class="pill" id="coinT">🪙 0 Babuxů</span><span class="pill" id="lvlT">⭐ Lvl 1</span></div>
- <div class="card" style="padding:6px 10px"><div class="xp"><div id="xpB" style="width:0%"></div></div></div>
- <h1>Hlídej <span>mimino!</span> 👶</h1>
- <p>Zážitek v obýváku: chytej mimino, dávej dudlík, přebaluj, krm, seber nůžky! Sbírej <b>Babuxy</b>, kupuj čepice a mazlíčky.</p>
- <button class="b big" id="netB" style="background:#7c3aed;box-shadow:0 5px 0 #4c1d95;font-size:22px;padding:14px 26px;margin:4px 0 2px">🌐 Hrát online s rodinou</button>
- <p id="onl" style="margin:4px 0 8px;font-size:13px;font-weight:700;color:#c4b5fd;min-height:18px"></p>
- <button class="b big" id="d3B" style="background:#c2410c;box-shadow:0 5px 0 #7c2d12;font-size:19px;padding:11px 22px;margin:0 0 8px">🏠 Dům z očí (Doom styl)</button>
- <div class="row"><button class="b on" id="m1">👤 1 hráč</button><button class="b" id="m2">👥 2 hráči</button><button class="b green" id="shopB">🛒 Obchod</button></div>
+<div id="menu" class="scr home">
+ <div class="hm">
+  <header class="hbar">
+   <div class="brand"><img id="hLogo" alt=""><div><b>Hlídej <span>mimino!</span></b><small>rodinná hra • 3D dům</small></div></div>
+   <div class="chips"><span class="chip" id="coinT">🪙 0</span><span class="chip" id="lvlT">⭐ 1</span><button class="chip ib" id="hMus" title="Hudba">🎵</button><button class="chip ib" id="shopB" title="Obchod">🛒</button></div>
+  </header>
+  <div class="xp hxp"><div id="xpB" style="width:0%"></div></div>
+  <div class="hcols">
+   <section class="hero glass">
+    <div class="me" id="hMe"><img id="hMeImg" alt=""><div><small id="hHi">Ahoj!</small><b id="hMeN">Vyber si postavu</b></div><button class="lnk" id="hChange">změnit</button></div>
+    <button class="cta" id="playB"><span class="ci">▶</span><span class="ct"><b>Hrát s rodinou</b><small id="playS">3D dům • online • bez kódů</small></span></button>
+    <div class="live" id="hLive"><i></i><span id="onl">🔎 Zjišťuji, kdo hraje…</span></div>
+   </section>
+   <section class="tiles">
+    <button class="tile t1" id="soloB"><span class="te">🏠</span><b>Sám v 3D</b><small>trénink v domě</small></button>
+    <button class="tile t2" id="c2dB"><span class="te">🕹️</span><b>Klasická 2D</b><small>1–2 hráči, online 2D</small></button>
+    <button class="tile t3" id="privB"><span class="te">🔒</span><b>Soukromá hra</b><small>s kódem</small></button>
+    <button class="tile t4" id="helpB"><span class="te">❓</span><b>Jak hrát</b><small>ovládání</small></button>
+   </section>
+  </div>
+  <details class="glass bdgw"><summary>🏅 Odznaky</summary><div class="badges" id="bdg"></div></details>
+  <button class="hide" id="d3B"></button>
+ </div>
+</div>
+<div id="sheet" class="sheet hide"><div class="sbox glass"><div class="shd"><b id="shT">Za koho hraješ?</b><button class="lnk" id="shX">✖</button></div><p id="shP" class="shp"></p><div class="pgrid" id="pgrid"></div></div></div>
+<div id="help" class="sheet hide"><div class="sbox glass" style="text-align:left"><div class="shd"><b>❓ Jak hrát</b><button class="lnk" id="helpX">✖</button></div>
+ <p class="shp">👶 Hlídej Arianku: dej dudlík, když pláče, nakrm ji, přebal ji, seber nebezpečné věci. Pomáhej rodině (+15), sklenice nos do myčky (+10). Po přebalení se umyj v koupelně!</p>
+ <p class="shp">📱 <b>3D:</b> levá páčka = chůze • táhni prstem vpravo = otáčení • ✋ AKCE • 🔄 předmět (dudlík / lahev / plenka) • 🗺️ mapa domu</p>
+ <p class="shp">⌨️ WASD + myš/šipky • E akce • Q předmět • M mapa • Mezerník skok • 🎮 ovladač: páčky + A/X/Y</p>
+ <p class="shp">🌐 <b>Hrát s rodinou:</b> kdo zapne hru a ťukne na Hrát, je hned ve stejném domě s ostatními (max 8). Bez kódů, bez účtů.</p></div></div>
+<div id="classic" class="scr hide">
+ <div class="top"><button class="b" id="c2X">‹ Zpět</button><span class="pill">🕹️ Klasická 2D</span></div>
+ <h1>Klasická <span>2D</span></h1>
+ <button class="b big" id="netB" style="background:#7c3aed;box-shadow:0 5px 0 #4c1d95;font-size:20px;padding:12px 24px;margin:4px 0 2px">🌐 Online 2D s rodinou</button>
+ <p id="onl2" style="margin:4px 0 8px;font-size:13px;font-weight:700;color:#c4b5fd;min-height:18px"></p>
+ <div class="row"><button class="b on" id="m1">👤 1 hráč</button><button class="b" id="m2">👥 2 hráči na 1 mobilu</button></div>
  <div class="card"><p id="pick" style="margin-top:0"><b>Vyber avatara:</b></p><div class="grid" id="grid"></div>
  <button class="b big hide" id="go" style="margin-top:8px">▶ Hrát!</button></div>
- <div class="card"><b>🏅 Odznaky</b><div class="badges" id="bdg"></div></div>
- <p style="font-size:12px">🕹️ Páčka vlevo = chůze • 🦘 SKOK přes nepořádek • ✋ AKCE dělá, co je napsané (Dudlík / Přebal / Nakrm / Seber / Ukliď / Umyj / Najdi)<br>⌨️ Klávesnice: WASD/šipky + Mezerník + E • 🎮 Xbox ovladač: páčka + A skok + X akce<br>👥 Ve dvou: každý má svou páčku a tlačítka na své straně.</p>
+ <p style="font-size:12px">🕹️ Páčka vlevo = chůze • 🦘 SKOK • ✋ AKCE • ⌨️ WASD/šipky + Mezerník + E • 👥 Ve dvou: každý má svou páčku a tlačítka na své straně.</p>
 </div>
 <div id="shop" class="scr hide">
  <div class="top"><span class="pill" id="coinS">🪙 0</span><button class="b" id="shopX">✖ Zpět</button></div>
@@ -650,8 +714,8 @@ function autoErr(t){const was=run;NET.role=null;const p=NET.peer;NET.peer=null;N
 const _end=end;end=function(){_end();if(NET.auto){const o=$('os');if(o)o.insertAdjacentHTML('beforeend','<p style="color:#ffd43b">⏳ Další kolo začne samo za pár sekund…</p>');
  if(NET.role==='host'){clearTimeout(AUTO.rt);AUTO.rt=setTimeout(()=>{if(NET.role==='host'&&NET.auto&&!run)hostStart()},9000)}}};
 // menu shows who is online
-setInterval(()=>{const vis=!$('menu').classList.contains('hide')||(!$('net').classList.contains('hide')&&!NET.role);if(vis&&!NET.role&&navigator.onLine)autoProbe();else if(!vis&&AUTO.probe&&!NET.role)closeProbe()},6000);
-setTimeout(()=>{if(!NET.role&&!$('menu').classList.contains('hide'))autoProbe();onlTxt()},400);
+setInterval(()=>{const vis=!$('menu').classList.contains('hide')||!$('classic').classList.contains('hide')||(!$('net').classList.contains('hide')&&!NET.role);if(vis&&!NET.role&&navigator.onLine)autoProbe();else if(!vis&&AUTO.probe&&!NET.role)closeProbe()},6000);
+
 // ================= 🏠 „Dům z očí“ – Doom-style raycaster view over the SAME simulation (works solo + online) =================
 const D3={on:0,c:null,ang:-Math.PI/2,map:0,hold:0,useT:0,flash:0,gold:0,lastL:3,lastSc:0,tp:{},ms:0,frames:0,PS:3,rw:0,rh:0,pp:null,tr:0,lt:0,sentH:'',hT:0,inited:0};
 const HOLDS=[{k:'dudlik',n:'Dudlík'},{k:'lahev',n:'Lahev'},{k:'plenka',n:'Plenka'}];
@@ -934,12 +998,12 @@ const _cf3=clientFrame;clientFrame=function(dt){_cf3(dt);const me=S&&S.d3&&S.P[N
  if(me.tx!=null){const gx=me.tx+me.in.dx*sp*.12,gy=me.ty+me.in.dy*sp*.12,e=Math.hypot(gx-pp.x,gy-pp.y);if(e>140){pp.x=me.tx;pp.y=me.ty}else{const k=Math.min(1,dt*5);pp.x+=(gx-pp.x)*k;pp.y+=(gy-pp.y)*k}}me.x=pp.x;me.y=pp.y};
 function drawD3g(){const g=$('d3g');g.innerHTML='';if(!D3.c)D3.c=chById(LS.get('nchar',''))||CH[3];CH.forEach(c=>{const d=document.createElement('div');d.className='ch'+(D3.c===c?' p1':'');
  d.innerHTML=(D3.c===c?'<i style="background:#00a2ff">TY</i>':'')+'<img src="'+SRC('sq_'+c.id)+'"><b>'+c.n+'</b><small>'+(c.r||'&nbsp;')+'</small>';d.onclick=()=>{D3.c=c;LS.set('nchar',c.id);drawD3g()};g.appendChild(d)})}
-function d3off(){D3.on=0;D3.pp=null;if(ROOM!==ROOM2){closeProbe();ROOM=ROOM2;AUTO.roster=null;AUTO.none=false}const h=document.querySelector('#net h1');if(h)h.innerHTML='Hrajte <span>spolu!</span> 📱📱'}
+function d3off(){D3.on=0;D3.pp=null;const h=document.querySelector('#net h1');if(h)h.innerHTML='Hrajte <span>spolu!</span> 📱📱'}
 const _dm3=drawMenu;drawMenu=function(){d3off();_dm3()};
 $('d3B').onclick=()=>{$('menu').classList.add('hide');$('d3s').classList.remove('hide');drawD3g()};
 $('d3X').onclick=()=>{$('d3s').classList.add('hide');$('menu').classList.remove('hide');drawMenu()};
 $('d3solo').onclick=()=>{d3off();D3.on=1;NET.role=null;SEL=[D3.c];start()};
-$('d3net').onclick=()=>{if(typeof Peer==='undefined'){alert('Online knihovna chybí.');return}d3off();D3.on=1;closeProbe();ROOM=ROOM3;AUTO.roster=null;AUTO.none=false;NET.myChar=D3.c;LS.set('nchar',D3.c.id);
+$('d3net').onclick=()=>{if(typeof Peer==='undefined'){alert('Online knihovna chybí.');return}d3off();D3.on=1;setRoom(ROOM3,1);NET.myChar=D3.c;LS.set('nchar',D3.c.id);
  $('d3s').classList.add('hide');$('netB').onclick();const h=document.querySelector('#net h1');if(h)h.innerHTML='🏠 Dům <span>z očí</span> – online';autoPick(D3.c)};
 // ---------- MUSIC: online = YouTube IFrame player (The Daughters of Eve – Hey Lover), offline = own chiptune loop ----------
 const YTID='KfE1QKu-h5Q';
@@ -979,6 +1043,51 @@ function chipStop(){clearInterval(MUS.chipT);MUS.chipT=null}
 window.addEventListener('pointerdown',()=>{if(MUS.on&&!MUS.started)musStart()},{capture:true});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)musPause();else if(MUS.on&&MUS.started)musResume()});
 setInterval(()=>{mb.style.display=run?'block':'none'},300);
+// ================= 🏠 Modern launcher: 3D „Dům z očí“ is the default; classic 2D is secondary =================
+function setRoom(r,noProbe){if(ROOM!==r){closeProbe();ROOM=r;AUTO.roster=null;AUTO.none=false}onlTxt();if(!noProbe&&!NET.role)autoProbe()}
+const HOME={me:null,mode:null};
+const meChar=()=>chById(LS.get('nchar',''))||null;
+const _onlTxt=onlTxt;onlTxt=function(){_onlTxt();const e=$('onl'),e2=$('onl2'),l=$('hLive');if(e2&&e)e2.textContent=e.textContent;if(l)l.classList.toggle('on',!!(AUTO.roster&&AUTO.roster.length));
+ if(e&&AUTO.roster&&AUTO.roster.length&&ROOM===ROOM3)e.textContent='Teď hraje '+AUTO.roster.length+': '+AUTO.roster.map(i=>chById(i).n).join(', ')+' – přidej se!';
+ else if(e&&AUTO.none&&ROOM===ROOM3)e.textContent='Zatím nikdo nehraje – začni a ostatní se přidají';
+ if(!$('sheet').classList.contains('hide')&&HOME.mode==='net')drawPick()};
+const _hdr=hdr;hdr=function(){_hdr();const l=lvlOf(SAVE.xp);$('coinT').textContent='🪙 '+SAVE.coins;$('lvlT').textContent='⭐ '+l};
+function renderHome(){const c=meChar();HOME.me=c;$('hLogo').src=SRC('sq_mimino');
+ if(c){$('hMeImg').src=SRC('sq_'+c.id);$('hMeImg').style.visibility='';$('hHi').textContent='Ahoj, hraješ za';$('hMeN').textContent=c.n;$('playS').textContent='jako '+c.n+' • 3D dům • online';$('hChange').textContent='změnit'}
+ else{$('hMeImg').src=SRC('sq_mimino');$('hHi').textContent='Ahoj! 👋';$('hMeN').textContent='Vyber si postavu';$('playS').textContent='3D dům • online • bez kódů';$('hChange').textContent='vybrat'}
+ $('hMus').textContent=MUS.on?'🎵':'🔇';onlTxt()}
+function drawPick(){const g=$('pgrid');g.innerHTML='';const net=HOME.mode==='net',me=meChar();
+ CH.forEach(c=>{const tk=net&&roomTaken(c.id);const d=document.createElement('button');d.className='pc'+(me===c?' sel':'')+(tk?' tk':'');
+  d.innerHTML='<img src="'+SRC('sq_'+c.id)+'" alt=""><b>'+c.n+'</b><small>'+(tk?'🎮 už hraje':c.r||'&nbsp;')+'</small>';
+  d.onclick=()=>{if(tk){$('shP').textContent='🎮 '+c.n+' už hraje – vyber jinou postavu.';return}LS.set('nchar',c.id);NET.myChar=c;D3.c=c;closeSheet();renderHome();const m=HOME.mode;HOME.mode=null;if(m==='net')play3net(c);else if(m==='solo')play3solo(c)};g.appendChild(d)})}
+function openSheet(mode,msg){HOME.mode=mode;$('shT').textContent=mode==='net'?'Za koho hraješ s rodinou?':mode==='solo'?'Za koho hraješ v 3D domě?':'Vyber si postavu';
+ $('shP').textContent=msg||(mode==='net'?'Ťukni na sebe a hned jsi ve hře. Šedé postavy už někdo hraje.':'Hra si tvou volbu zapamatuje – příště stačí jedno ťuknutí.');drawPick();$('sheet').classList.remove('hide')}
+function closeSheet(){$('sheet').classList.add('hide')}
+function play3net(c){if(typeof Peer==='undefined'){openSheet('pick','⚠️ Online knihovna se nenačetla (chybí internet?). Zkus „Sám v 3D“.');return}
+ if(roomTaken(c.id)){openSheet('net','🎮 '+c.n+' už ve hře je – vyber jinou postavu.');return}
+ if(AUTO.roster&&AUTO.roster.length>=8){openSheet('net','🚫 Hra je plná (8 hráčů) – zkus to za chvíli nebo hraj sám v 3D.');return}
+ D3.c=c;$('d3net').onclick()}
+function play3solo(c){D3.c=c;$('menu').classList.add('hide');$('d3solo').onclick()}
+$('playB').onclick=()=>{const c=meChar();if(c)play3net(c);else openSheet('net')};
+$('soloB').onclick=()=>{const c=meChar();if(c)play3solo(c);else openSheet('solo')};
+$('hChange').onclick=()=>openSheet('pick');$('hMe').onclick=e=>{if(e.target.id!=='hChange')openSheet('pick')};
+$('shX').onclick=()=>{HOME.mode=null;closeSheet()};$('sheet').onclick=e=>{if(e.target.id==='sheet'){HOME.mode=null;closeSheet()}};
+$('helpB').onclick=()=>$('help').classList.remove('hide');$('helpX').onclick=()=>$('help').classList.add('hide');$('help').onclick=e=>{if(e.target.id==='help')$('help').classList.add('hide')};
+$('hMus').onclick=e=>{e.stopPropagation();mb.click();$('hMus').textContent=MUS.on?'🎵':'🔇'};
+$('c2dB').onclick=()=>{$('menu').classList.add('hide');$('classic').classList.remove('hide');d3off();setRoom(ROOM2);MODE=1;SEL=[];m1.classList.add('on');m2.classList.remove('on');drawMenu()};
+$('c2X').onclick=()=>{$('classic').classList.add('hide');$('menu').classList.remove('hide');drawMenu()};
+$('privB').onclick=()=>{d3off();D3.on=1;setRoom(ROOM3,1);closeProbe();const c=meChar();NET.myChar=c;if(c)D3.c=c;$('netB').onclick();$('priv').open=true;drawNet();
+ const h=document.querySelector('#net h1');if(h)h.innerHTML='🔒 Soukromá hra <span>3D</span>'};
+// screens that used to hide #menu now must also hide #classic when a game starts
+const _startH=start;start=function(cfg){$('classic').classList.add('hide');closeSheet();_startH(cfg)};
+const _scH=startClient;startClient=function(){$('classic').classList.add('hide');closeSheet();_scH()};
+const _netBH=$('netB').onclick;$('netB').onclick=()=>{$('classic').classList.add('hide');closeSheet();_netBH()};
+// back from the online screen: return where we came from
+const _netXH=$('netX').onclick;$('netX').onclick=()=>{const was2D=!D3.on&&ROOM===ROOM2;_netXH();if(was2D){$('menu').classList.add('hide');$('classic').classList.remove('hide');onlTxt()}};
+const _dmH=drawMenu;drawMenu=function(){_dmH();if(!$('menu').classList.contains('hide')){setRoom(ROOM3);renderHome()}};
+new MutationObserver(()=>document.body.classList.toggle('home-on',!$('menu').classList.contains('hide'))).observe($('menu'),{attributes:true,attributeFilter:['class']});
+document.body.classList.toggle('home-on',!$('menu').classList.contains('hide'));
+ROOM=ROOM3;renderHome();setTimeout(()=>{if(!NET.role&&!$('menu').classList.contains('hide'))autoProbe();onlTxt()},400);
 drawMenu();
 if(location.protocol.startsWith('http')&&'serviceWorker'in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
 </script></body></html>
