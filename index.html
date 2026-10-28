@@ -71,14 +71,14 @@ body.home-on #musB{display:none}
 <div id="menu" class="scr home">
  <div class="hm">
   <header class="hbar">
-   <div class="brand"><img id="hLogo" alt=""><div><b>Hlídej <span>mimino!</span></b><small>rodinná hra • 3D dům</small></div></div>
+   <div class="brand"><img id="hLogo" alt=""><div><b>Hlídej <span>mimino!</span></b><small>rodinná hra ve 3D</small></div></div>
    <div class="chips"><span class="chip" id="coinT">🪙 0</span><span class="chip" id="lvlT">⭐ 1</span><button class="chip ib" id="hMus" title="Hudba">🎵</button><button class="chip ib" id="shopB" title="Obchod">🛒</button></div>
   </header>
   <div class="xp hxp"><div id="xpB" style="width:0%"></div></div>
   <div class="hcols">
    <section class="hero glass">
     <div class="me" id="hMe"><img id="hMeImg" alt=""><div><small id="hHi">Ahoj!</small><b id="hMeN">Vyber si postavu</b></div><button class="lnk" id="hChange">změnit</button></div>
-    <button class="cta" id="playB"><span class="ci">▶</span><span class="ct"><b>Hrát s rodinou</b><small id="playS">3D dům • online • bez kódů</small></span></button>
+    <button class="cta" id="playB"><span class="ci">▶</span><span class="ct"><b>Hrát s rodinou</b><small id="playS">Hrej ve 3D • online • bez kódů</small></span></button>
     <div class="live" id="hLive"><i></i><span id="onl">🔎 Zjišťuji, kdo hraje…</span></div>
    </section>
    <section class="tiles">
@@ -129,8 +129,8 @@ body.home-on #musB{display:none}
  <p style="font-size:12px">📶 Všechny mobily potřebují internet (stačí společná Wi-Fi). Funguje přes Wi-Fi i mobilní data – na datech může hra jít přes veřejný přenosový server (relay), pak je o chlup pomalejší. Max 8 hráčů. Babuxy a odznaky se ukládají každému do jeho mobilu.<br>📲 Když soubor přijde přes WhatsApp, otevři ho v <b>Chrome</b> (⋮ → Otevřít v…), ne v náhledu WhatsAppu.</p>
 </div>
 <div id="d3s" class="scr hide">
- <div class="top"><span class="pill">🏠 Dům z očí</span><button class="b" id="d3X">✖ Zpět</button></div>
- <h1>Dům <span>z očí</span> 👀</h1>
+ <div class="top"><span class="pill">▶ Hrej</span><button class="b" id="d3X">✖ Zpět</button></div>
+ <h1>▶ <span>Hrej</span> ve 3D</h1>
  <p>Projdi celý dům vlastníma očima jako ve staré dobré 3D hře – obývák, kuchyň s myčkou, koupelnu, chodbu i dětský pokoj. Najdi Arianku a postarej se o ni!</p>
  <div class="card"><p style="margin-top:0"><b>Vyber postavu:</b></p><div class="grid" id="d3g"></div></div>
  <div class="row"><button class="b big" id="d3solo" style="padding:12px 22px">👤 Hrát sám</button><button class="b big" id="d3net" style="padding:12px 22px;background:#7c3aed;box-shadow:0 4px 0 #4c1d95">🌐 Online s rodinou</button></div>
@@ -200,7 +200,7 @@ const OBS=[
  {k:'tvc',x:420,y:200,w:230,h:30},
  {k:'sink',x:0,y:1160,w:210,h:140},
  {k:'dw',x:0,y:735,w:66,h:105}];
-// interior walls used only by the 3D house mode ("Dům z očí"): obývák / chodba / kuchyň / koupelna / dětský pokoj
+// interior walls used only by the 3D house mode ("Hrej"): obývák / chodba / kuchyň / koupelna / dětský pokoj
 const D3W=[{x:0,y:660,w:300,h:20},{x:460,y:660,w:300,h:20},{x:220,y:680,w:20,h:140},{x:220,y:940,w:20,h:120},{x:0,y:1060,w:240,h:20},{x:220,y:1080,w:20,h:20},{x:220,y:1200,w:20,h:100},{x:580,y:940,w:20,h:100},{x:580,y:1140,w:20,h:160},{x:600,y:940,w:160,h:20}];
 function SOL(){return S&&S.d3?OBS.concat(D3W):OBS}
 const TABLE=OBS[2],SINKP={x:105,y:1140},DWP={x:90,y:790},TVP={x:535,y:250};
@@ -716,7 +716,7 @@ const _end=end;end=function(){_end();if(NET.auto){const o=$('os');if(o)o.insertA
 // menu shows who is online
 setInterval(()=>{const vis=!$('menu').classList.contains('hide')||!$('classic').classList.contains('hide')||(!$('net').classList.contains('hide')&&!NET.role);if(vis&&!NET.role&&navigator.onLine)autoProbe();else if(!vis&&AUTO.probe&&!NET.role)closeProbe()},6000);
 
-// ================= 🏠 „Dům z očí“ – Doom-style raycaster view over the SAME simulation (works solo + online) =================
+// ================= ▶ „Hrej“ 3D mode – Doom-style raycaster view over the SAME simulation (works solo + online) =================
 const D3={on:0,c:null,ang:-Math.PI/2,map:0,hold:0,useT:0,flash:0,gold:0,lastL:3,lastSc:0,tp:{},ms:0,frames:0,PS:3,rw:0,rh:0,pp:null,tr:0,lt:0,sentH:'',hT:0,inited:0};
 const HOLDS=[{k:'dudlik',n:'Dudlík'},{k:'lahev',n:'Lahev'},{k:'plenka',n:'Plenka'}];
 const ROOM2=ROOM,ROOM3=ROOM+'-dum3d';
@@ -1004,7 +1004,7 @@ $('d3B').onclick=()=>{$('menu').classList.add('hide');$('d3s').classList.remove(
 $('d3X').onclick=()=>{$('d3s').classList.add('hide');$('menu').classList.remove('hide');drawMenu()};
 $('d3solo').onclick=()=>{d3off();D3.on=1;NET.role=null;SEL=[D3.c];start()};
 $('d3net').onclick=()=>{if(typeof Peer==='undefined'){alert('Online knihovna chybí.');return}d3off();D3.on=1;setRoom(ROOM3,1);NET.myChar=D3.c;LS.set('nchar',D3.c.id);
- $('d3s').classList.add('hide');$('netB').onclick();const h=document.querySelector('#net h1');if(h)h.innerHTML='🏠 Dům <span>z očí</span> – online';autoPick(D3.c)};
+ $('d3s').classList.add('hide');$('netB').onclick();const h=document.querySelector('#net h1');if(h)h.innerHTML='▶ <span>Hrej</span> – online';autoPick(D3.c)};
 // ---------- MUSIC: online = YouTube IFrame player (The Daughters of Eve – Hey Lover), offline = own chiptune loop ----------
 const YTID='KfE1QKu-h5Q';
 const MUS={on:LS.get('music',true)!==false,mode:null,yt:null,ytOk:false,started:false,chipT:null,next:0,step:0,g:null};
@@ -1043,7 +1043,7 @@ function chipStop(){clearInterval(MUS.chipT);MUS.chipT=null}
 window.addEventListener('pointerdown',()=>{if(MUS.on&&!MUS.started)musStart()},{capture:true});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)musPause();else if(MUS.on&&MUS.started)musResume()});
 setInterval(()=>{mb.style.display=run?'block':'none'},300);
-// ================= 🏠 Modern launcher: 3D „Dům z očí“ is the default; classic 2D is secondary =================
+// ================= 🏠 Modern launcher: 3D „Hrej“ is the default; classic 2D is secondary =================
 function setRoom(r,noProbe){if(ROOM!==r){closeProbe();ROOM=r;AUTO.roster=null;AUTO.none=false}onlTxt();if(!noProbe&&!NET.role)autoProbe()}
 const HOME={me:null,mode:null};
 const meChar=()=>chById(LS.get('nchar',''))||null;
@@ -1053,14 +1053,14 @@ const _onlTxt=onlTxt;onlTxt=function(){_onlTxt();const e=$('onl'),e2=$('onl2'),l
  if(!$('sheet').classList.contains('hide')&&HOME.mode==='net')drawPick()};
 const _hdr=hdr;hdr=function(){_hdr();const l=lvlOf(SAVE.xp);$('coinT').textContent='🪙 '+SAVE.coins;$('lvlT').textContent='⭐ '+l};
 function renderHome(){const c=meChar();HOME.me=c;$('hLogo').src=SRC('sq_mimino');
- if(c){$('hMeImg').src=SRC('sq_'+c.id);$('hMeImg').style.visibility='';$('hHi').textContent='Ahoj, hraješ za';$('hMeN').textContent=c.n;$('playS').textContent='jako '+c.n+' • 3D dům • online';$('hChange').textContent='změnit'}
- else{$('hMeImg').src=SRC('sq_mimino');$('hHi').textContent='Ahoj! 👋';$('hMeN').textContent='Vyber si postavu';$('playS').textContent='3D dům • online • bez kódů';$('hChange').textContent='vybrat'}
+ if(c){$('hMeImg').src=SRC('sq_'+c.id);$('hMeImg').style.visibility='';$('hHi').textContent='Ahoj, hraješ za';$('hMeN').textContent=c.n;$('playS').textContent='Hrej jako '+c.n+' • 3D • online';$('hChange').textContent='změnit'}
+ else{$('hMeImg').src=SRC('sq_mimino');$('hHi').textContent='Ahoj! 👋';$('hMeN').textContent='Vyber si postavu';$('playS').textContent='Hrej ve 3D • online • bez kódů';$('hChange').textContent='vybrat'}
  $('hMus').textContent=MUS.on?'🎵':'🔇';onlTxt()}
 function drawPick(){const g=$('pgrid');g.innerHTML='';const net=HOME.mode==='net',me=meChar();
  CH.forEach(c=>{const tk=net&&roomTaken(c.id);const d=document.createElement('button');d.className='pc'+(me===c?' sel':'')+(tk?' tk':'');
   d.innerHTML='<img src="'+SRC('sq_'+c.id)+'" alt=""><b>'+c.n+'</b><small>'+(tk?'🎮 už hraje':c.r||'&nbsp;')+'</small>';
   d.onclick=()=>{if(tk){$('shP').textContent='🎮 '+c.n+' už hraje – vyber jinou postavu.';return}LS.set('nchar',c.id);NET.myChar=c;D3.c=c;closeSheet();renderHome();const m=HOME.mode;HOME.mode=null;if(m==='net')play3net(c);else if(m==='solo')play3solo(c)};g.appendChild(d)})}
-function openSheet(mode,msg){HOME.mode=mode;$('shT').textContent=mode==='net'?'Za koho hraješ s rodinou?':mode==='solo'?'Za koho hraješ v 3D domě?':'Vyber si postavu';
+function openSheet(mode,msg){HOME.mode=mode;$('shT').textContent=mode==='net'?'Za koho hraješ s rodinou?':mode==='solo'?'Za koho hraješ ve 3D?':'Vyber si postavu';
  $('shP').textContent=msg||(mode==='net'?'Ťukni na sebe a hned jsi ve hře. Šedé postavy už někdo hraje.':'Hra si tvou volbu zapamatuje – příště stačí jedno ťuknutí.');drawPick();$('sheet').classList.remove('hide')}
 function closeSheet(){$('sheet').classList.add('hide')}
 function play3net(c){if(typeof Peer==='undefined'){openSheet('pick','⚠️ Online knihovna se nenačetla (chybí internet?). Zkus „Sám v 3D“.');return}
